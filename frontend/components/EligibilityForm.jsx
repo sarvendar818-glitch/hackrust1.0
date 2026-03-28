@@ -47,23 +47,25 @@ const EligibilityForm = () => {
     "Andaman and Nicobar Islands", "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu", "Delhi", "Jammu and Kashmir", "Ladakh", "Lakshadweep", "Puducherry"
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simulate short processing delay
-    setTimeout(() => {
-      const matched = matchSchemes(formData);
+    try {
+      const matched = await matchSchemes(formData);
       setResults(matched);
       setSubmitted(true);
-      setIsLoading(false);
       setActiveFilter('All');
       
       // Smooth scroll to results
       setTimeout(() => {
         document.getElementById('results-section')?.scrollIntoView({ behavior: 'smooth' });
       }, 100);
-    }, 1200);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleReset = () => {
