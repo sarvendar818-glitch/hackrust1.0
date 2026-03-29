@@ -4,7 +4,7 @@ const translations = {
     navHowItWorks: 'How It Works',
     navWhoBenefits: 'Who Benefits',
     navEligibility: 'Check Eligibility',
-    heroBadge: '🇮🇳 HACKRUST 1.0 | FinTech & Digital Economy',
+    heroBadge: '🇮🇳 Vikshit Bharat 2047',
     heroHeading: 'India Has 800+ Government Schemes Worth ₹15 Lakh Crore. Are You Getting Yours?',
     heroSub: 'SchemeSaathi uses AI to find, apply & track every scheme you\'re entitled to — in your language, with zero paperwork.',
     heroCTA: 'Check Eligibility Free',
